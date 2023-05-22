@@ -1,0 +1,48 @@
+name: quran_app
+description: A new Flutter project.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_native_splash: ^2.2.19
+  shared_preferences: ^2.1.1
+  scrollable_positioned_list: ^0.3.8
+  share_plus: ^7.0.1
+  url_launcher: ^6.1.11
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^2.0.0
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/icon.png
+  size: 
+  android: true
+  ios: true
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/
+
+  fonts:
+    - family: quran
+      fonts:
+        - asset: assets/fonts/HafsSmart_08.ttf
+    - family: me_quran
+      fonts:
+        - asset: assets/fonts/me_quran.ttf
