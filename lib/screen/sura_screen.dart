@@ -3,6 +3,8 @@ import '../core/utils/app_constant.dart';
 import '../app/app_pref.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
+import '../core/widgets/basmala_widget.dart';
+
 class SuraScreen extends StatefulWidget {
   final int sura;
   final List arabic;
@@ -88,7 +90,7 @@ class _SuraScreenState extends State<SuraScreen> {
                     children: [
                       (index != 0) || (widget.sura == 0) || (widget.sura == 8)
                           ? const Text('')
-                          : const RetunBasmala(),
+                          : const BasmalaWidget(),
                       Container(
                         color: index % 2 != 0
                             ? const Color.fromARGB(255, 253, 251, 240)
@@ -153,7 +155,7 @@ class _SuraScreenState extends State<SuraScreen> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             widget.sura + 1 != 1 && widget.sura + 1 != 9
-                                ? const RetunBasmala()
+                                ? const BasmalaWidget()
                                 : const Text(''),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -224,20 +226,4 @@ class _SuraScreenState extends State<SuraScreen> {
   }
 }
 
-class RetunBasmala extends StatelessWidget {
-  const RetunBasmala({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Stack(children: [
-      Center(
-        child: Text(
-          "‏ ‏‏ ‏‏‏‏ ‏‏‏‏‏‏ ‏",
-          style: TextStyle(
-              fontFamily: 'quran', fontSize: AppConstant.arabicFontSize),
-          textDirection: TextDirection.rtl,
-        ),
-      ),
-    ]);
-  }
-}
