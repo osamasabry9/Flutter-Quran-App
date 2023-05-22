@@ -10,7 +10,7 @@ class AppConstant {
   static int bookmarkedAyah = 1;
   static int bookmarkedSura = 1;
   static bool fabIsClicked = true;
-  static Uri quranAppurl = Uri.parse('https://github.com');
+  static Uri quranAppurl = Uri.parse('https://github.com/osamasabry9/Flutter-Quran-App.git');
   static List arabic = [];
   static List malayalam = [];
   static List quran = [];
@@ -257,7 +257,6 @@ static final ItemPositionsListener itemPositionsListener =ItemPositionsListener.
         await rootBundle.loadString("assets/hafs_smart_v8.json");
     final data = json.decode(response);
     arabic = data["quran"];
-    malayalam = data["malayalam"];
-    return quran = [arabic, malayalam];
+    return quran = [arabic,];
   }
 }

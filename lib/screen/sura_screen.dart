@@ -56,10 +56,6 @@ class _SuraScreenState extends State<SuraScreen> {
                   color: const Color.fromARGB(196, 0, 0, 0),
                 ),
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: const [],
-              ),
             ],
           ),
         ),

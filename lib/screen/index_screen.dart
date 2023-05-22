@@ -29,10 +29,10 @@ class _IndexScreenState extends State<IndexScreen> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          //"القرآن",
-          "Quran",
+          "القرآن",
+          // "Quran",
           style: TextStyle(
-              //fontFamily: 'quran',
+              fontFamily: 'quran',
               fontSize: 35,
               fontWeight: FontWeight.bold,
               shadows: [
@@ -55,13 +55,13 @@ class _IndexScreenState extends State<IndexScreen> {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.connectionState == ConnectionState.done) {
             if (snapshot.hasError) {
-              return const Text('Error');
+              return const Center(child: Text('Error'));
             } else if (snapshot.hasData) {
               return NameAndNumSuraWidget(
                 quran: snapshot.data,
               );
             } else {
-              return const Text('Empty data');
+              return const Center(child: Text('Empty data'));
             }
           } else {
             return Text('State: ${snapshot.connectionState}');
